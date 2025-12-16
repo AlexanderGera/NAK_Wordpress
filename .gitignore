@@ -1,9 +1,39 @@
 # WordPress core
-wp-config.php
-wp-content/uploads/
-wp-content/cache/
+/wp-admin/
+/wp-includes/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backups/
+/wp-content/ai1wm-backups/
+
+# User uploads
+/wp-content/uploads/
+
+# Plugins (игнорировать, если не хочешь хранить их в репозитории)
 wp-content/plugins/
-wp-content/upgrade/
+
+# Themes (если только активная тема в репозитории, игнорировать остальные)
+wp-content/themes/*/
+!wp-content/themes/твой-тема/
+
+# Config files
+wp-config.php
+.htaccess
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
 *.log
 *.sql
-.DS_Store
+*.sqlite
+*.swp
+
+# Node / Composer / other build files
+node_modules/
+vendor/
+npm-debug.log
+yarn-error.log
+
+# Backup files
+*.bak
+*.tmp
