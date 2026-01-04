@@ -12,10 +12,6 @@
 # Plugins (игнорировать, если не хочешь хранить их в репозитории)
 wp-content/plugins/
 
-# Themes (если только активная тема в репозитории, игнорировать остальные)
-wp-content/themes/*/
-!wp-content/themes/твой-тема/
-
 # Config files
 wp-config.php
 .htaccess
