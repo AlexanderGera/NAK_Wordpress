@@ -69,7 +69,7 @@
             <a href="#" class="title-font-style header__menu-mobile_link">Для читання</a>
             <span class="header__menu-mobile_divider"></span>
             <a href="#" class="title-font-style header__menu-mobile_link">Катехизис</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Трасляції</a>
+            <a href="#" class="title-font-style header__menu-mobile_link">Трансляції</a>
             <a href="#" class="title-font-style header__menu-mobile_link">Події</a>
             <a href="#" class="title-font-style header__menu-mobile_link">Пожертвування</a>
             <a href="#" class="title-font-style header__menu-mobile_link">Контакти</a>

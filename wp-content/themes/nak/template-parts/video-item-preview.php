@@ -26,7 +26,7 @@ foreach ($video_posts as $post) :
             'alt' => esc_attr(get_the_title())
         ]);
     } else {
-        echo '<img class="video__item_img-preview" src="' . get_template_directory_uri() . '/assets/img/default_pict_video-preview.jpg"
+        echo '<img class="video__item_img-preview" src="' . get_template_directory_uri() . '/assets/img/default_pict_news.jpg"
                     alt="' . esc_attr(get_the_title()) . '">';
     }
     ?>
