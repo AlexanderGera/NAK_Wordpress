@@ -31,5 +31,40 @@ add_image_size('annoncements-thumbnails', 150, 100, true);
 //video-preview
 add_image_size('video-thumbnails', 325, 186, true);
 
+//menu registration
+function theme_menu_registration()
+{
+    register_nav_menus([
+        'main_menu' => 'Основное меню',
+        'sub_menu' => 'Второстепенное меню',
+    ]);
+}
 
-?>
+add_action('after_setup_theme', 'theme_menu_registration');
+
+// menu rendering
+function theme_menu_rendering($location)
+{
+    wp_nav_menu([
+        'theme_location'  => $location,
+        'container'       => false,
+        'echo'            => true,
+        'items_wrap'      => '%3$s',
+        'depth'           => 1,
+    ]);
+}
+
+//add classes to links in Menues
+add_filter('nav_menu_link_attributes', 'filter_add_classes_nav_menu_links', 10, 3);
+
+function filter_add_classes_nav_menu_links($atts, $item, $args)
+{
+    $atts['class'] = 'title-font-style';
+    if ($args->theme_location === 'main_menu') {
+        $atts['class'] = 'header__menu_link title-font-style';
+    } elseif ($args->theme_location === 'sub_menu') {
+        $atts['class'] = 'header__submenu_link submenu-font-style';
+    }
+
+    return $atts;
+}

@@ -25,17 +25,18 @@
             <div class="header__logo-wrapper">
 
                 <?php get_template_part('template-parts/logo'); ?>
-                
+
                 <span class="header__logo_title"><?php the_field('seit_name', 12); ?></span>
             </div>
             <!-- submenu on top -->
             <div class="header__submenu_wrapper">
                 <nav class="header__submenu">
-                    <a class="header__submenu_link submenu-font-style" href="#">Катехизис</a>
-                    <a class="header__submenu_link submenu-font-style" href="#">Трасляції</a>
-                    <a class="header__submenu_link submenu-font-style" href="#">Події</a>
-                    <a class="header__submenu_link submenu-font-style" href="#">Пожертвування</a>
-                    <a class="header__submenu_link submenu-font-style" href="#">Контакти</a>
+
+                    <!-- submenu rendering -->
+                    <?php
+                    theme_menu_rendering('sub_menu');
+                    ?>
+
                 </nav>
                 <form class="header__search">
                     <label for="header_search-input" class="visually-hidden">Пошук</label>
@@ -52,26 +53,22 @@
         </div>
         <!--  main menu -->
         <nav class="header__menu">
-            <a href="#" class="header__menu_link title-font-style">Про Церкву</a>
-            <a href="#" class="header__menu_link title-font-style">Вірування</a>
-            <a href="#" class="header__menu_link title-font-style">Служіння</a>
-            <a href="#" class="header__menu_link title-font-style">Спільнота</a>
-            <a href="#" class="header__menu_link title-font-style">Новини</a>
-            <a href="#" class="header__menu_link title-font-style">Для читання</a>
+            <!-- main menu rendering -->
+            <?php
+            theme_menu_rendering('main_menu');
+            ?>
         </nav>
         <!--    mobile menu-->
         <nav class="header__menu-mobile">
-            <a href="#" class="title-font-style header__menu-mobile_link">Про Церкву</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Вірування</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Служіння</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Спільнота</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Новини</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Для читання</a>
+            <!-- main menu for mobile menu rendering -->
+            <?php
+            theme_menu_rendering('main_menu');
+            ?>
             <span class="header__menu-mobile_divider"></span>
-            <a href="#" class="title-font-style header__menu-mobile_link">Катехизис</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Трансляції</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Події</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Пожертвування</a>
-            <a href="#" class="title-font-style header__menu-mobile_link">Контакти</a>
+            <!-- sub menu for mobile menu rendering -->
+            <?php
+            theme_menu_rendering('sub_menu');
+            ?>
+
         </nav>
     </header>
