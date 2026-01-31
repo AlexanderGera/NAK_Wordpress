@@ -1013,18 +1013,51 @@ a {
     margin-bottom: 15px;
 }
 .post h1.title-font-style {
-    font-size: 27px;
-    line-height: initial;
+    font-size: 32px;
     letter-spacing: 0.05em;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
+
+.post h2 {
+    font-family: 'PTSans', 'Arial', sans-serif;
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transform: translateX(30px);
+}
+
+.post h2::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #548ec2;
+    transform: translateY(-50%);
+}
+
 .post p {
     font-family: 'PTSans', 'Arial', sans-serif;
     font-size: 16px;
-    line-height: initial;
+    line-height: 1.3em;
     font-weight: 400;
-    margin: 0 0 1em 0;
+    margin: 0 0 1.1em 0;
 }
+
+.post p a {
+    text-decoration: revert;
+    color: #548ec2;
+}
+
+.post p em {
+    font-style: italic;
+}
+
 /* .post img {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -1034,6 +1067,7 @@ a {
 }
 .post p strong {
     font-weight: 600;
+    line-height: 1.5em;
 }
 .post.text_wrapper {
     display: flex;
