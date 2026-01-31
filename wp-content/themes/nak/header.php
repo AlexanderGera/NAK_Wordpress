@@ -31,12 +31,10 @@
             <!-- submenu on top -->
             <div class="header__submenu_wrapper">
                 <nav class="header__submenu">
-
                     <!-- submenu rendering -->
                     <?php
                     theme_menu_rendering('sub_menu');
                     ?>
-
                 </nav>
                 <form class="header__search">
                     <label for="header_search-input" class="visually-hidden">Пошук</label>
@@ -69,6 +67,5 @@
             <?php
             theme_menu_rendering('sub_menu');
             ?>
-
         </nav>
     </header>

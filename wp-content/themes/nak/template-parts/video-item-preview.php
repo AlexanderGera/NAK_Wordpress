@@ -1,8 +1,8 @@
 <?php
 
 $video_posts = get_posts(array(
-    'numberposts' => 5,
-    'category_name' => 'video_broadcast',
+    'numberposts' => 4,
+    'category_name' => 'video',
     'orderby' => 'date',
     'order' => 'DESC',
     'post_type' => 'post',

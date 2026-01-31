@@ -59,12 +59,10 @@ add_filter('nav_menu_link_attributes', 'filter_add_classes_nav_menu_links', 10, 
 
 function filter_add_classes_nav_menu_links($atts, $item, $args)
 {
-    $atts['class'] = 'title-font-style';
     if ($args->theme_location === 'main_menu') {
         $atts['class'] = 'header__menu_link title-font-style';
     } elseif ($args->theme_location === 'sub_menu') {
         $atts['class'] = 'header__submenu_link submenu-font-style';
     }
-
     return $atts;
 }
