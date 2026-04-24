@@ -2,7 +2,7 @@
 
 $video_posts = get_posts(array(
     'numberposts' => 4,
-    'category_name' => 'video',
+    'category_name' => 'video_broadcast',
     'orderby' => 'date',
     'order' => 'DESC',
     'post_type' => 'post',

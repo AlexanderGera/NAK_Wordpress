@@ -50,7 +50,7 @@ function theme_menu_rendering($location)
         'container'       => false,
         'echo'            => true,
         'items_wrap'      => '%3$s',
-        'depth'           => 1,
+        'depth'           => 0,
     ]);
 }
 
